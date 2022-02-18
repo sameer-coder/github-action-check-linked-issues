@@ -38,6 +38,12 @@ async function run() {
     const token = core.getInput("github-token");
     const octokit = github.getOctokit(token);
 
+    core.debug(`-----------------`);
+    core.debug(`prNumber : ${number}`);
+    core.debug(`repoName : ${name}`);
+    core.debug(`repoOwner : ${owner.login}`);
+    core.debug(`-----------------`);
+
     const data = await getLinkedIssues({
       prNumber: number,
       repoName: name,
